@@ -1447,3 +1447,10 @@
     }
   ]
 }
+if __name__ == "__main__":
+    import streamlit as st
+    st.title("Posture Detection App 🧍‍♂️")
+    st.write("This app uses your webcam to detect and alert for poor posture.")
+    from streamlit_webrtc import webrtc_streamer
+    webrtc_streamer(key="posture", video_processor_factory=VideoProcessor)
+
